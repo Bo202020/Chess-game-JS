@@ -1,3 +1,6 @@
+body {
+  background: lightcoral;
+}
 :root {
   --width-height: min(96vh, 96vw);
 }
@@ -5,27 +8,26 @@
   width: var(--width-height);
   height: var(--width-height);
   background-color: #e5e5f7;
-  opacity: 0.8;
-  background-image: repeating-linear-gradient(
-      45deg,
-      #444cf7 25%,
-      transparent 25%,
-      transparent 75%,
-      #444cf7 75%,
-      #444cf7
-    ),
-    repeating-linear-gradient(
-      45deg,
-      #444cf7 25%,
-      #e5e5f7 25%,
-      #e5e5f7 75%,
-      #444cf7 75%,
-      #444cf7
-    );
-  background-position: 0 0, 100px 100px;
-  background-size: 200px 200px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+.square {
+  width: calc(var(--width-height) / 8);
+  position: relative;
+  height: calc(var(--width-height) / 8);
+  display: inline-block;
+}
+.row {
+  display: flex;
+  width: 100%;
+}
+.white {
+  background: white;
+}
+.black {
+  background: black;
 }
